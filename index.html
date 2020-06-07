@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Daniel Medrano Huerta">
+	<meta name="keywords"
+		  content="Daniel Medrano Huerta,Daniel Medrano,mdanieltg,desarrollador,desarrollador web,programador">
+	<meta name="description"
+		  content="Daniel Medrano Huerta (mdanieltg) es un desarrollador web y de escritorio con conocimientos de C#, HTML, CSS, JavaScript y Linux">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Daniel Medrano Huerta</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Oxygen&display=swap">
+</head>
+<body>
+<div class="portada">
+	<main>
+		<p>Mi nombre es <br><span class="mi-nombre">Daniel Medrano Huerta</span>,<br> soy desarrollador <i
+			class="fas fa-laptop-code"></i></p>
+	</main>
+	<section>
+		<p>Escribo código
+			<span class="mensaje-cambiante">para la Web <i class="fas fa-globe"></i></span>
+			<span class="mensaje-cambiante">para el escritorio <i class="fas fa-desktop"></i></span>
+			<span class="mensaje-cambiante">para los servidores <i class="fas fa-server"></i></span>
+		</p>
+	</section>
+	<footer>
+		<p>¡Sígueme o di hola <i class="fas fa-hand-spock"></i>!</p>
+		<ul class="vinculos-sociales">
+			<li>
+				<!-- Perfil de GitHub de mdanieltg -->
+				<a href="https://github.com/mdanieltg" target="_blank"><span class="fab fa-github"></span></a>
+			</li>
+			<li>
+				<!-- Perfil de Twitter de mdanieltg -->
+				<a href="https://twitter.com/mdanieltg" target="_blank"><span class="fab fa-twitter"></span></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+
+<script src="https://kit.fontawesome.com/d46d9fc69f.js" crossorigin="anonymous"></script>
+<script>
+  (function () {
+    let mensajes = document.querySelectorAll(".mensaje-cambiante");
+    let indice = 0;
+
+    function cambiarMensaje() {
+      for (let i = 0; i < mensajes.length; i++) {
+        if (i === indice)
+          mensajes[i].style.display = "inline";
+        else
+          mensajes[i].style.display = "none";
+      }
+
+      indice = ++indice % 3;
+    }
+
+    setInterval(cambiarMensaje, 3000);
+    cambiarMensaje();
+  })();
+</script>
+</body>
+</html>
