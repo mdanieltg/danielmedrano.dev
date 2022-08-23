@@ -1,89 +1,59 @@
 :root {
-	--color-texto: #e5e5e5;
-	--color-primario: #66f;
-	--color-secundario: #f66;
-	--color-terciario: #6f6;
+  --background-color: #000;
+  --background-color-contrast: #200;
+  --text-color: #c1a6a6;
+  --text-color-secondary: #c1b4a6;
 }
 
-*, *::before,
+*,
+*::before,
 *::after { box-sizing: border-box; }
 
-html,
-body,
-.portada { height: 100%; }
+html {
+  font-size: 24px;
+  font-family: 'Bitter', sans-serif;
+}
 
 body {
-	font-family: 'Oxygen', sans-serif;
-	font-size: 24px;
-	color: var(--color-texto);
+  line-height: 1.25;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0.333rem;
 }
 
-a,
-a:visited,
-a:active,
-a:hover { color: var(--color-secundario); }
-
-p { margin: 0; }
-
-ul.vinculos-sociales {
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	list-style-type: none;
+a {
+  color: var(--text-color-secondary);
+  text-decoration: underline;
 }
 
-ul.vinculos-sociales > li {
-	margin: 0.2em;
-	font-size: 2em;
+p {
+  text-align: justify;
 }
 
-footer { text-align: center; }
-
-.mensaje-cambiante {
-	color: var(--color-terciario);
-	font-family: 'Overpass Mono', monospace;
+.stand-out {
+  padding: 1rem;
+  background-color: var(--background-color-contrast);
 }
 
-.mi-nombre {
-	font-size: 1.5em;
-	color: var(--color-primario);
+.stand-out strong {
+  font-family: 'IMB Plex Mono', monospace;
 }
 
-.portada {
-	padding: 0.5em;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-between;
-	background-color: rgba(45, 45, 45, 0.8);
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #fcf9ef;
+    --background-color-contrast: #adad83;
+    --text-color: #4c4741;
+    --text-color-secondary: #4c4c41;
+  }
 }
 
-.portada::after {
-	content: '';
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url('img/portada.jpg') no-repeat center;
-	background-size: cover;
-	z-index: -1;
-}
-
-@media (min-width: 576px) {
-	main,
-	section,
-	footer {
-		width: 576px;
-		margin: 0 auto;
-	}
-}
-
-@media (min-width: 992px) {
-	body {
-		font-size: 36px;
-		text-align: center;
-	}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 1.15;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
