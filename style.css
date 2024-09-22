@@ -39,6 +39,24 @@ p {
   font-family: 'IMB Plex Mono', monospace;
 }
 
+.card {
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 10px 10px 0 rgba(229, 226, 218, 0.5);
+}
+
+.card-text {
+  padding: 0 1em;
+}
+
+.card img { 
+  width: 100px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: #fcf9ef;
