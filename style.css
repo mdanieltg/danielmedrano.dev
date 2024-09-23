@@ -7,7 +7,9 @@
 
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 24px;
@@ -18,43 +20,62 @@ body {
   line-height: 1.25;
   color: var(--text-color);
   background-color: var(--background-color);
-  margin: 0.333rem;
+  margin: 0;
 }
 
-a {
-  color: var(--text-color-secondary);
-  text-decoration: underline;
-}
-
-p {
-  text-align: justify;
+.intro {
+  padding: 1em;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color: var(--background-color-contrast);
 }
 
 .stand-out {
-  padding: 1rem;
-  background-color: var(--background-color-contrast);
+  line-height: 2;
+  text-align: justify;
+}
+
+.display-more {
+  text-align: center;
 }
 
 .stand-out strong {
   font-family: 'IMB Plex Mono', monospace;
 }
 
-.card {
-  margin: 1em;
-  padding: 0.5em;
-  border-radius: 0.25em;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-shadow: 0 10px 10px 0 rgba(229, 226, 218, 0.5);
-}
-
-.card-text {
+.skills h2 {
   padding: 0 1em;
 }
 
-.card img { 
+.card {
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.card:first-of-type {
+  padding-top: 0;
+}
+
+.card:nth-of-type(2n) {
+  background-color: var(--background-color-contrast);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
   width: 100px;
+}
+
+.social {
+  padding: 0 1em;
+}
+
+a {
+  color: var(--text-color-secondary);
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: light) {
@@ -68,10 +89,45 @@ p {
 
 @media screen and (min-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.15;
     width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto 1em;
+  }
+
+  .intro {
+    height: inherit;
+    background-color: inherit;
+  }
+
+  .stand-out {
+    background-color: var(--background-color-contrast);
+    padding: 1em;
+    border-radius: 0.25em;
+    line-height: inherit;
+  }
+
+  .display-more {
+    display: none;
+  }
+
+  .skills {
+    margin: 1em;
+  }
+
+  .skills h2 {
+    padding: 0;
+  }
+
+  .card {
+    border-radius: 0.25em;
+  }
+
+  .card:nth-of-type(2n) {
+    box-shadow: none;
+  }
+
+  .card-text {
+    padding: 0 0 0 1em;
   }
 }
