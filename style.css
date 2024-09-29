@@ -11,16 +11,22 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 24px;
-  font-family: 'Bitter', sans-serif;
-}
-
 body {
+  font-family: 'Bitter', sans-serif;
+  font-size: 16px;
   line-height: 1.25;
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
 }
 
 .intro {
@@ -42,7 +48,7 @@ body {
 }
 
 .stand-out strong {
-  font-family: 'IMB Plex Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .skills h2 {
@@ -66,7 +72,12 @@ body {
 }
 
 .card img {
-  width: 100px;
+  width: 80px;
+}
+
+.card-text {
+  padding: 0 0 0 1em;
+  text-align: justify;
 }
 
 .social {
@@ -95,13 +106,17 @@ a {
     margin: 1em auto 1em;
   }
 
+  h1 {
+    margin: 1em 0;
+  }
+
   .intro {
     height: inherit;
     background-color: inherit;
   }
 
   .stand-out {
-    background-color: var(--background-color-contrast);
+    border: 5px solid var(--background-color-contrast);
     padding: 1em;
     border-radius: 0.25em;
     line-height: inherit;
@@ -127,7 +142,7 @@ a {
     box-shadow: none;
   }
 
-  .card-text {
-    padding: 0 0 0 1em;
+  .card img {
+    width: 100px;
   }
 }
