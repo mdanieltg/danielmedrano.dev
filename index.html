@@ -1,68 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="Daniel Medrano Huerta">
-	<meta name="keywords"
-		  content="Daniel Medrano Huerta,Daniel Medrano,mdanieltg,desarrollador,desarrollador web,programador">
-	<meta name="description"
-		  content="Daniel Medrano Huerta (mdanieltg) es un desarrollador web y de escritorio con conocimientos de C#, HTML, CSS, JavaScript y Linux">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Daniel Medrano Huerta</title>
-	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Oxygen&display=swap">
+  <title>Daniel Medrano Huerta</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Daniel Medrano Huerta is a software developer with experience in the .NET ecosystem and Linux distributions.">
+  <meta name="keywords" content="Daniel Medrano Huerta,Daniel Medrano,mdanieltg,developer,web developer,software developer,software engineer,programmer,coder,dotnet,entity framework">
+  <meta name="author" content="Daniel Medrano Huerta">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=IBM+Plex+Mono&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="portada">
-	<main>
-		<p>Mi nombre es <br><span class="mi-nombre">Daniel Medrano Huerta</span>,<br> soy desarrollador <i
-			class="fas fa-laptop-code"></i></p>
-	</main>
-	<section>
-		<p>Escribo código
-			<span class="mensaje-cambiante">para la Web <i class="fas fa-globe"></i></span>
-			<span class="mensaje-cambiante">para el escritorio <i class="fas fa-desktop"></i></span>
-			<span class="mensaje-cambiante">para los servidores <i class="fas fa-server"></i></span>
-		</p>
-	</section>
-	<footer>
-		<p>¡Sígueme o di hola <i class="fas fa-hand-spock"></i>!</p>
-		<ul class="vinculos-sociales">
-			<li>
-				<!-- Perfil de GitHub de mdanieltg -->
-				<a href="https://github.com/mdanieltg" target="_blank"><span class="fab fa-github"></span></a>
-			</li>
-			<li>
-				<!-- Perfil de Twitter de mdanieltg -->
-				<a href="https://twitter.com/mdanieltg" target="_blank"><span class="fab fa-twitter"></span></a>
-			</li>
-		</ul>
-	</footer>
-</div>
+  <main>
+    <section class="intro">
+      <h1>Daniel Medrano Huerta</h1>
 
-<script src="https://kit.fontawesome.com/d46d9fc69f.js" crossorigin="anonymous"></script>
-<script>
-  (function () {
-    let mensajes = document.querySelectorAll(".mensaje-cambiante");
-    let indice = 0;
+      <div class="stand-out">
+        I am a <strong>software developer</strong> from Mexico City. I love
+        learning new things, sharing what I've learned, inline skating and
+        swimming. I also enjoy tackling problems by using programming.
+      </div>
 
-    function cambiarMensaje() {
-      for (let i = 0; i < mensajes.length; i++) {
-        if (i === indice)
-          mensajes[i].style.display = "inline";
-        else
-          mensajes[i].style.display = "none";
-      }
+      <a class="display-more" href="#skills"><img src="img/chevron-down.svg"></a>
+    </section>
 
-      indice = ++indice % 3;
-    }
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
 
-    setInterval(cambiarMensaje, 3000);
-    cambiarMensaje();
-  })();
-</script>
+      <div class="card">
+        <img src="img/csharp.png">
+        <div class="card-text">
+          I am highly proficient in C# and its associated technologies,
+          including EntityFramework Core, ASP.NET Core, and LINQ.
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/angular.png">
+        <div class="card-text">
+          I have a strong understanding of fundamental web technologies such
+          as HTML, CSS, and JavaScript, as well as modern frameworks like
+          Angular.
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/php.png">
+        <div class="card-text">
+          Additionally, I am knowledgeable in PHP and Bootstrap.
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/docker.png">
+        <div class="card-text">
+          My expertise extends to DevOps technologies, including Git, Docker,
+          and Kubernetes.
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/sql-server.svg">
+        <div class="card-text">
+          On the database front, I am experienced with MySQL and SQL Server.
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/redhat.svg">
+        <div class="card-text">
+          Furthermore, I am familiar with various operating systems, including
+          Windows, Ubuntu, Fedora, and Red Hat Enterprise Linux.
+        </div>
+      </div>
+    </section>
+
+    <section id="social" class="social">
+      <h2>Social</h2>
+      <p>
+        Follow me on
+        <a href="https://www.linkedin.com/in/daniel-medrano-huerta/" target="_blank">LinkedIn</a>
+        or check out my public work on
+        <a href="https://github.com/mdanieltg" target="_blank">GitHub</a>.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
